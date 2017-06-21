@@ -4,11 +4,9 @@ import java.io.*;
 import java.nio.file.*;
 import java.nio.file.FileSystem;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 import java.util.logging.*;
 
 /**
@@ -38,7 +36,7 @@ public class Rechnungsabgleich {
         // Vorinitialisierung der Map für die einzelnen Kennzahlen
         ergebnisseVsPrTyp = new HashMap<>();
         for (String versandprodukt : versandproduktTyp) {
-            Map<String, Long> inBlocMap = new HashMap<String, Long>();
+            Map<String, Long> inBlocMap = new HashMap<>();
             for (String spezialisierung : spezialisierungsTyp) {
                 inBlocMap.put(spezialisierung, 0L);
                 ergebnisseVsPrTyp.put(versandprodukt, inBlocMap);
